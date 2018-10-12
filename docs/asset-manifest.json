@@ -1,11 +1,11 @@
 {
-  "main.js": "/horoscopes-generator/static/js/main.50d7edb4.chunk.js",
-  "main.js.map": "/horoscopes-generator/static/js/main.50d7edb4.chunk.js.map",
-  "static/js/1.a641da4b.chunk.js": "/horoscopes-generator/static/js/1.a641da4b.chunk.js",
-  "static/js/1.a641da4b.chunk.js.map": "/horoscopes-generator/static/js/1.a641da4b.chunk.js.map",
+  "main.js": "/horoscopes-generator/static/js/main.66edaaee.chunk.js",
+  "main.js.map": "/horoscopes-generator/static/js/main.66edaaee.chunk.js.map",
+  "static/js/1.1bd179ff.chunk.js": "/horoscopes-generator/static/js/1.1bd179ff.chunk.js",
+  "static/js/1.1bd179ff.chunk.js.map": "/horoscopes-generator/static/js/1.1bd179ff.chunk.js.map",
   "runtime~main.js": "/horoscopes-generator/static/js/runtime~main.1e069e5b.js",
   "runtime~main.js.map": "/horoscopes-generator/static/js/runtime~main.1e069e5b.js.map",
   "index.html": "/horoscopes-generator/index.html",
-  "precache-manifest.0fe00c09739ea6ac7e52960ef6c1dc71.js": "/horoscopes-generator/precache-manifest.0fe00c09739ea6ac7e52960ef6c1dc71.js",
+  "precache-manifest.6bcb4c6d95f6aedfabdce98aa34125bb.js": "/horoscopes-generator/precache-manifest.6bcb4c6d95f6aedfabdce98aa34125bb.js",
   "service-worker.js": "/horoscopes-generator/service-worker.js"
 }

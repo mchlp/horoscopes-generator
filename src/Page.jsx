@@ -2,27 +2,39 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import horoscopes from './horoscopes.json';
 
-const REQ_URL = 'https://horoscope-api.herokuapp.com';
+const REQ_URL = 'https://cors-anywhere.herokuapp.com/horoscope-api.herokuapp.com';
 
 export class Page extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            data: null
+            display: null,
+            signData: {}
         };
     }
 
     componentDidMount() {
-        let allSignsElement = [];
+        let getCount = 0;
         for (const sign of horoscopes['signs']) {
             axios.get(REQ_URL + '/horoscope/today/' + sign['Sign'], {
+                'crossDomain': true,
                 'headers': {
                     'Access-Control-Allow-Origin': '*'
                 }
             })
                 .then((res) => {
-                    console.log(res);
+                    this.setState(prevState => {
+                        let newSignData = prevState.signData;
+                        newSignData[sign['Sign']] = res.data;
+                        return {
+                            signData: newSignData
+                        };
+                    });
+                    getCount++;
+                    if (getCount === horoscopes['signs'].length) {
+                        this.displayData();
+                    }
                 })
                 .catch((err) => {
                     console.error(err);
@@ -30,13 +42,36 @@ export class Page extends Component {
         }
     }
 
+    displayData() {
+        const signData = this.state.signData;
+        let allSignsElement = [];
+        for (const sign of horoscopes['signs']) {
+            const curData = signData[sign['Sign']];
+            const curElement = (
+                <div className='card mb-2' key={sign['Sign']}>
+                    <div className='card-body'>
+                        <h4>{curData['sunsign']}</h4>
+                        <h6>{sign['Period']}</h6>
+                        <p>{curData['horoscope']}</p>
+                    </div>
+                </div>
+            );
+            allSignsElement.push(curElement);
+        }
+        this.setState({
+            display: allSignsElement
+        });
+    }
+
     render() {
         return (
             <div>
                 <div className='container mt-5'>
-                    <h1>Horroscopes</h1>
-                    {this.state.data ? 'Loading...' : this.state.data}
-                    {JSON.stringify(horoscopes)}
+                    <div className='mb-3 text-center'>
+                        <h1>Horoscopes</h1>
+                        <p className='font-weight-bold'>{new Date().toDateString()}</p>
+                    </div>
+                    {this.state.display ? this.state.display : <h4>Loading...</h4>}
                 </div>
             </div>
         );
