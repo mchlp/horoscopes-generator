@@ -16,7 +16,11 @@ export class Page extends Component {
     componentDidMount() {
         let allSignsElement = [];
         for (const sign of horoscopes['signs']) {
-            axios.get(REQ_URL + '/horoscope/today/' + sign['Sign'])
+            axios.get(REQ_URL + '/horoscope/today/' + sign['Sign'], {
+                'headers': {
+                    'Access-Control-Allow-Origin': '*'
+                }
+            })
                 .then((res) => {
                     console.log(res);
                 })
