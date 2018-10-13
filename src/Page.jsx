@@ -10,6 +10,7 @@ export class Page extends Component {
         super(props);
         this.state = {
             display: null,
+            date: null,
             signData: {}
         };
     }
@@ -28,6 +29,7 @@ export class Page extends Component {
                         let newSignData = prevState.signData;
                         newSignData[sign['Sign']] = res.data;
                         return {
+                            date: res.data['current_date'],
                             signData: newSignData
                         };
                     });
@@ -70,7 +72,7 @@ export class Page extends Component {
                 <div className='container mt-5'>
                     <div className='mb-3 text-center'>
                         <h1>Horoscopes</h1>
-                        <p className='font-weight-bold'>{new Date().toDateString()}</p>
+                        <p className='font-weight-bold'>{this.state.date ? this.state.date : ''}</p>
                     </div>
                     {this.state.display ? this.state.display : <h4>Loading...</h4>}
                 </div>
