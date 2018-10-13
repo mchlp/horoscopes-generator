@@ -4,15 +4,15 @@ self.__precacheManifest = [
     "url": "/horoscopes-generator/static/js/runtime~main.1e069e5b.js"
   },
   {
-    "revision": "66edaaee1b5bcca4e452",
-    "url": "/horoscopes-generator/static/js/main.66edaaee.chunk.js"
+    "revision": "503667ef6bf658424a04",
+    "url": "/horoscopes-generator/static/js/main.503667ef.chunk.js"
   },
   {
     "revision": "1bd179ff5f7019b5ce2e",
     "url": "/horoscopes-generator/static/js/1.1bd179ff.chunk.js"
   },
   {
-    "revision": "c9a10ad7ea3030625bf2347d08541c79",
+    "revision": "6708f736e94f19fd92e5d22d2508e6c4",
     "url": "/horoscopes-generator/index.html"
   }
 ];
