@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import horoscopes from './horoscopes.json';
 
-const REQ_URL = 'https://cors-anywhere.herokuapp.com/horoscope-api.herokuapp.com';
+const REQ_URL = 'https://aztro.sameerkumar.website/';
 
 export class Page extends Component {
 
@@ -17,7 +17,7 @@ export class Page extends Component {
     componentDidMount() {
         let getCount = 0;
         for (const sign of horoscopes['signs']) {
-            axios.get(REQ_URL + '/horoscope/today/' + sign['Sign'], {
+            axios.post(REQ_URL + '/?day=today&sign=' + sign['Sign'].toLowerCase(), {
                 'crossDomain': true,
                 'headers': {
                     'Access-Control-Allow-Origin': '*'
@@ -50,9 +50,10 @@ export class Page extends Component {
             const curElement = (
                 <div className='card mb-2' key={sign['Sign']}>
                     <div className='card-body'>
-                        <h4>{curData['sunsign']}</h4>
+                        <h4>{sign['Sign']}</h4>
                         <h6>{sign['Period']}</h6>
-                        <p>{curData['horoscope']}</p>
+                        <p>{curData['description']}</p>
+                        <p>Mood: {curData['mood']}</p>
                     </div>
                 </div>
             );
