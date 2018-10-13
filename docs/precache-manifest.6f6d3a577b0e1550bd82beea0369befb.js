@@ -12,7 +12,7 @@ self.__precacheManifest = [
     "url": "/horoscopes-generator/static/js/1.1bd179ff.chunk.js"
   },
   {
-    "revision": "6708f736e94f19fd92e5d22d2508e6c4",
+    "revision": "74140046d86e6d26eb77e5fa8e898560",
     "url": "/horoscopes-generator/index.html"
   }
 ];

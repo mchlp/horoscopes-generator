@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.2/workbox-sw.js");
 
 importScripts(
-  "/horoscopes-generator/precache-manifest.41819827c8c8edab22cb694daaceef5b.js"
+  "/horoscopes-generator/precache-manifest.6f6d3a577b0e1550bd82beea0369befb.js"
 );
 
 workbox.clientsClaim();
