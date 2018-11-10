@@ -71,7 +71,7 @@ export class Page extends Component {
             <div>
                 <div className='container mt-5'>
                     <div className='mb-3 text-center'>
-                        <h1>Horoscopes</h1>
+                        <h1>DMCI Bulldog Horoscopes</h1>
                         <p className='font-weight-bold'>{this.state.date ? this.state.date : ''}</p>
                     </div>
                     {this.state.display ? this.state.display : <h4>Loading...</h4>}

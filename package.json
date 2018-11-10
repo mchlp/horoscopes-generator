@@ -2,7 +2,6 @@
   "name": "horroscope-generator",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://mchlp.github.io/horoscopes-generator",
   "dependencies": {
     "axios": "^0.18.0",
     "eslint-plugin-react": "^7.11.1",
